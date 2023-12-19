@@ -268,41 +268,70 @@ void rawatInap(vector<dataPasien>& datapasien1){
 		switch(inputListRuangan){
 			case 1:
 				harga = 425;
-				tampilkanHarga(false,harga,diskon,datapasien1); break;
+				tampilkanHarga(false,harga,diskon,datapasien1); 
+				pembayaran(saldo, harga ,datapasien1);
+				break;
 			case 2:
 				harga = 240;
-				tampilkanHarga(false, harga,diskon,datapasien1); break;
+				tampilkanHarga(false, harga,diskon,datapasien1); 
+				pembayaran(saldo, harga ,datapasien1);
+				break;
 			case 3:
 				harga = 140;
-				tampilkanHarga(true, harga,diskon,datapasien1); break;
+				tampilkanHarga(true, harga,diskon,datapasien1); 
+				pembayaran(saldo, harga ,datapasien1);
+				break;
 			case 4:
 				harga = 80;
-				tampilkanHarga(true, harga,diskon,datapasien1); break;
+				tampilkanHarga(true, harga,diskon,datapasien1);
+				pembayaran(saldo, harga ,datapasien1);
+				break;
 			case 5:
 				harga = 55;
-				tampilkanHarga(true, harga,diskon,datapasien1); break;
+				tampilkanHarga(true, harga,diskon,datapasien1); 
+				pembayaran(saldo, harga ,datapasien1);
+				break;
+			default:
+				cout << "input yang anda masukan tiak valid !!!" << endl;
+				cin.get();
+				cin.get();
+				break;
 			}
-	}
+		}
 	else if(datapasien1[0].bpjs == false){
 		switch(inputListRuangan){
 			case 1:
 				harga = 425;
-				tampilkanHarga(false, harga,diskon,datapasien1); break;
+				tampilkanHarga(false, harga,diskon,datapasien1); 
+				pembayaran(saldo, harga ,datapasien1);
+				break;
 			case 2:
 				harga = 240;
-				tampilkanHarga(false, harga,diskon,datapasien1); break;
+				tampilkanHarga(false, harga,diskon,datapasien1); 
+				pembayaran(saldo, harga ,datapasien1);
+				break;
 			case 3:
 				harga = 145;
-				tampilkanHarga(false, harga,diskon,datapasien1); break;
+				tampilkanHarga(false, harga,diskon,datapasien1); 
+				pembayaran(saldo, harga ,datapasien1);
+				break;
 			case 4:
 				harga = 80;
-				tampilkanHarga(false, harga,diskon,datapasien1); break;
+				tampilkanHarga(false, harga,diskon,datapasien1); 
+				pembayaran(saldo, harga ,datapasien1);
+				break;
 			case 5:
 				harga = 55;
-				tampilkanHarga(false, harga,diskon,datapasien1); break;
+				tampilkanHarga(false, harga,diskon,datapasien1); 
+				pembayaran(saldo, harga ,datapasien1);
+				break;
+			default:
+				cout << "input yang anda masukan tiak valid !!!" << endl;
+				cin.get();
+				cin.get();
+				break;
 			}
 	}
-pembayaran(saldo, harga ,datapasien1);
 };
 int listTindakanMedis(){
 	system("clear");
@@ -325,12 +354,20 @@ void tindakanMedis(vector<dataPasien>& dataPasien1){
 			case 1:
 				harga = 200;
 				tampilkanHarga(true, harga,diskon,dataPasien1); break;
+				pembayaran(saldo, harga, dataPasien1); break;
 			case 2:
 				harga = 5000;
 				tampilkanHarga(true, harga,diskon,dataPasien1); break;
+				pembayaran(saldo, harga, dataPasien1); break;
 			case 3:
 				harga = 300;
 				tampilkanHarga(true, harga,diskon,dataPasien1); break;
+				pembayaran(saldo, harga, dataPasien1); break;
+			default:
+				cout << "input yang anda masukan tiak valid !!!" << endl;
+				cin.get();
+				cin.get();
+				break;
 		}
 	}
 	else if(dataPasien1[0].bpjs == false){
@@ -338,15 +375,22 @@ void tindakanMedis(vector<dataPasien>& dataPasien1){
 			case 1:
 				harga = 200;
 				tampilkanHarga(false, harga,diskon,dataPasien1); break;
+				pembayaran(saldo, harga, dataPasien1); break;
 			case 2:
 				harga = 5000;
 				tampilkanHarga(false, harga,diskon,dataPasien1); break;
+				pembayaran(saldo, harga, dataPasien1); break;
 			case 3:
 				harga = 300;
 				tampilkanHarga(false, harga,diskon,dataPasien1); break;
+				pembayaran(saldo, harga, dataPasien1); break;
+			default:
+				cout << "input yang anda masukan tiak valid !!!" << endl;
+				cin.get();
+				cin.get();
+				break;
 		}
 	}
-pembayaran(saldo, harga, dataPasien1);
 };
 int inputanObat(){
 	int input;
@@ -428,5 +472,10 @@ void pembelianObat(vector<dataPasien>& dataPasien1){
 				cin.get();
 				goto tryInputObatKapsul;
 			}
+	}
+	else {
+	cout << "input yang anda masukan tiak valid !!!" << endl;
+			cin.get();
+			cin.get();
 	}
 };
