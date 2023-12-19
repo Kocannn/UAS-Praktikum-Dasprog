@@ -145,9 +145,11 @@ int listRuangan(){
 	cin >> userInput;
 	return userInput;
 }
-void tampilkanHarga(double& harga, double& diskon, vector<dataPasien>& dataPasien1){
-	if (dataPasien1[0].bpjs == true){
-		harga = harga - (diskon * harga);
+void tampilkanHarga(bool butuhDiskon ,double& harga, double& diskon, vector<dataPasien>& dataPasien1){
+	if (butuhDiskon == true){
+		if (dataPasien1[0].bpjs == true){
+			harga = harga - (diskon * harga);
+		}
 	}
 	cout << "harga yang harus dibayar : $" << harga << endl;
 }
@@ -266,38 +268,38 @@ void rawatInap(vector<dataPasien>& datapasien1){
 		switch(inputListRuangan){
 			case 1:
 				harga = 425;
-				tampilkanHarga(harga,diskon,datapasien1); break;
+				tampilkanHarga(false,harga,diskon,datapasien1); break;
 			case 2:
 				harga = 240;
-				tampilkanHarga(harga,diskon,datapasien1); break;
+				tampilkanHarga(false, harga,diskon,datapasien1); break;
 			case 3:
 				harga = 140;
-				tampilkanHarga(harga,diskon,datapasien1); break;
+				tampilkanHarga(true, harga,diskon,datapasien1); break;
 			case 4:
 				harga = 80;
-				tampilkanHarga(harga,diskon,datapasien1); break;
+				tampilkanHarga(true, harga,diskon,datapasien1); break;
 			case 5:
 				harga = 55;
-				tampilkanHarga(harga,diskon,datapasien1); break;
+				tampilkanHarga(true, harga,diskon,datapasien1); break;
 			}
 	}
 	else if(datapasien1[0].bpjs == false){
 		switch(inputListRuangan){
 			case 1:
 				harga = 425;
-				tampilkanHarga(harga,diskon,datapasien1); break;
+				tampilkanHarga(false, harga,diskon,datapasien1); break;
 			case 2:
 				harga = 240;
-				tampilkanHarga(harga,diskon,datapasien1); break;
+				tampilkanHarga(false, harga,diskon,datapasien1); break;
 			case 3:
 				harga = 145;
-				tampilkanHarga(harga,diskon,datapasien1); break;
+				tampilkanHarga(false, harga,diskon,datapasien1); break;
 			case 4:
 				harga = 80;
-				tampilkanHarga(harga,diskon,datapasien1); break;
+				tampilkanHarga(false, harga,diskon,datapasien1); break;
 			case 5:
 				harga = 55;
-				tampilkanHarga(harga,diskon,datapasien1); break;
+				tampilkanHarga(false, harga,diskon,datapasien1); break;
 			}
 	}
 pembayaran(saldo, harga ,datapasien1);
@@ -322,26 +324,26 @@ void tindakanMedis(vector<dataPasien>& dataPasien1){
 		switch(inputListTindakanMedis){
 			case 1:
 				harga = 200;
-				tampilkanHarga(harga,diskon,dataPasien1); break;
+				tampilkanHarga(true, harga,diskon,dataPasien1); break;
 			case 2:
 				harga = 5000;
-				tampilkanHarga(harga,diskon,dataPasien1); break;
+				tampilkanHarga(true, harga,diskon,dataPasien1); break;
 			case 3:
 				harga = 300;
-				tampilkanHarga(harga,diskon,dataPasien1); break;
+				tampilkanHarga(true, harga,diskon,dataPasien1); break;
 		}
 	}
 	else if(dataPasien1[0].bpjs == false){
 		switch(inputListTindakanMedis){
 			case 1:
 				harga = 200;
-				tampilkanHarga(harga,diskon,dataPasien1); break;
+				tampilkanHarga(false, harga,diskon,dataPasien1); break;
 			case 2:
 				harga = 5000;
-				tampilkanHarga(harga,diskon,dataPasien1); break;
+				tampilkanHarga(false, harga,diskon,dataPasien1); break;
 			case 3:
 				harga = 300;
-				tampilkanHarga(harga,diskon,dataPasien1); break;
+				tampilkanHarga(false, harga,diskon,dataPasien1); break;
 		}
 	}
 pembayaran(saldo, harga, dataPasien1);
