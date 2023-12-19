@@ -12,7 +12,6 @@ struct listObat{
 	vector<obat> sirup;
 	vector<obat> kapsul;
 };
-
 listObat listobat1 = {
     {
     	{"Paracetamol", 5},
