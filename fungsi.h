@@ -30,21 +30,21 @@ listObat listobat1 = {
      }
 };
 void listObatTablet(){
-	system("clear");
+	system("cls");
 	cout << "\n\t\t\tTablet\n" << endl;
 	for (auto& tablet : listobat1.tablet){
 		cout << "nama : " <<tablet.namaObat << "\t\t Harga : $" << tablet.harga <<  endl;
 	};
 };
 void listObatSirup(){
-	system("clear");
+	system("cls");
 	cout << "\n\t\t\tSirup\n" << endl;
 	for (auto& sirup : listobat1.sirup){
 		cout << "nama : " << sirup.namaObat << "\t\t Harga : $" << sirup.harga << endl;
 	}
 };
 void listObatKapsul(){
-	system("clear");
+	system("cls");
 	cout << "\n\t\t\tKapsul\n" << endl;
 	for (auto& kapsul : listobat1.kapsul){
 	cout << "nama : " << kapsul.namaObat << "\t\t Harga : $" << kapsul.harga << endl;
@@ -65,7 +65,7 @@ struct dataPasien
 vector<dataPasien> pendaftaran(vector<dataPasien>& dataPasien1){
 	dataPasien temp;
 	char input;
-	system("clear");
+	system("cls");
 	cout << "Mendaftar" << endl;
 	cout << "masukan nama : ";
 	getline(cin, temp.nama);
@@ -98,7 +98,7 @@ vector<dataPasien> pendaftaran(vector<dataPasien>& dataPasien1){
 	return dataPasien1;
 }
 void informasiPasien(vector<dataPasien>& dataPasien1){
-	system("clear");
+	system("cls");
 	cout << "Informasi Pasien " << endl ;
 	for (int i = 0; i < dataPasien1.size(); i++){
 		cout << "Nama : " << dataPasien1[i].nama << endl;
@@ -133,7 +133,7 @@ int menu(){
 }
 int listRuangan(){
 	int userInput;
-	system("clear");
+	system("cls");
 	cout << "Pilih tipe ruangan yang anda inginkan " << endl;
 	cout << "1. Tipe VVIP ($425/hari)" << endl;
 	cout << "2. Tipe VIP ($240/hari)" << endl;
@@ -333,7 +333,7 @@ void rawatInap(vector<dataPasien>& datapasien1){
 	}
 };
 int listTindakanMedis(){
-	system("clear");
+	system("cls");
 	int input;
 	cout << "Tindakan medis" << endl;
 	cout << "1. Pemeriksaan Kesehatan Umum $200" << endl;
@@ -344,7 +344,7 @@ int listTindakanMedis(){
 	return input;	
 }
 void tindakanMedis(vector<dataPasien>& dataPasien1){
-	system("clear");
+	system("cls");
 	double harga, saldo;
 	int inputListTindakanMedis = listTindakanMedis();
 	double diskon = diskonBpjsTindakanMedis(inputListTindakanMedis, dataPasien1);
@@ -410,7 +410,7 @@ string cariObat(){
 	return input;
 }
 void pembelianObat(vector<dataPasien>& dataPasien1){
-	system("clear");
+	system("cls");
 	double harga, saldo;
 	bool obatDitemukan = false;
 	int input = inputanObat();

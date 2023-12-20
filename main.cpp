@@ -9,7 +9,7 @@ int main()
 	bool isContiniue = true;
 	pendaftaran(dataPasien2);
 	while(isContiniue){
-	system("clear");
+	system("cls");
 	cout << "Halo " << dataPasien2[0].nama << "!!!" << endl;
 	int userInput = menu();
 	switch (userInput){
