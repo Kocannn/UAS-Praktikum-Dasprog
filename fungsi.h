@@ -23,7 +23,6 @@ listObat listobat1 = {
     	{"Cetirizine", 6},
      	{"Antitusif", 7}
      },
-
     {
     	{"Amoxicillin", 7},
      	{"Omeprazole", 15},
@@ -205,7 +204,7 @@ void kalkulasiPembayaran(double saldo, double totalPembayaran){
 	if (saldo >= totalPembayaran){
 		cout << "Pembayaran berhasil!!!!" << endl;
 		saldo = saldo - totalPembayaran;
-		cout << "Sisa saldo anda adalah : $ " << saldo << endl;
+		cout << "Kembalian anda adalah : $ " << saldo << endl;
 	}
 	else if (saldo < totalPembayaran){
 		cout << "Maaf uang anda kurang !!!" << endl;
@@ -353,15 +352,15 @@ void tindakanMedis(vector<dataPasien>& dataPasien1){
 		switch(inputListTindakanMedis){
 			case 1:
 				harga = 200;
-				tampilkanHarga(true, harga,diskon,dataPasien1); break;
+				tampilkanHarga(true, harga,diskon,dataPasien1);
 				pembayaran(saldo, harga, dataPasien1); break;
 			case 2:
 				harga = 5000;
-				tampilkanHarga(true, harga,diskon,dataPasien1); break;
+				tampilkanHarga(true, harga,diskon,dataPasien1);
 				pembayaran(saldo, harga, dataPasien1); break;
 			case 3:
 				harga = 300;
-				tampilkanHarga(true, harga,diskon,dataPasien1); break;
+				tampilkanHarga(true, harga,diskon,dataPasien1);
 				pembayaran(saldo, harga, dataPasien1); break;
 			default:
 				cout << "input yang anda masukan tiak valid !!!" << endl;
@@ -374,15 +373,15 @@ void tindakanMedis(vector<dataPasien>& dataPasien1){
 		switch(inputListTindakanMedis){
 			case 1:
 				harga = 200;
-				tampilkanHarga(false, harga,diskon,dataPasien1); break;
+				tampilkanHarga(false, harga,diskon,dataPasien1);
 				pembayaran(saldo, harga, dataPasien1); break;
 			case 2:
 				harga = 5000;
-				tampilkanHarga(false, harga,diskon,dataPasien1); break;
+				tampilkanHarga(false, harga,diskon,dataPasien1);
 				pembayaran(saldo, harga, dataPasien1); break;
 			case 3:
 				harga = 300;
-				tampilkanHarga(false, harga,diskon,dataPasien1); break;
+				tampilkanHarga(false, harga,diskon,dataPasien1);
 				pembayaran(saldo, harga, dataPasien1); break;
 			default:
 				cout << "input yang anda masukan tiak valid !!!" << endl;
